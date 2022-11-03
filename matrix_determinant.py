@@ -39,17 +39,14 @@ for i in range(input_str):
         a.append(int(input()))
     matrix.append(a)
 
+print()
+print("Введённая вами матрица:")
 
 for i in range(input_str):
     for j in range(input_row):
         print(matrix[i][j], end=" ")
     print()
 
-print()
-# Вывод матрицы на экран
-print("Введённая вами матрица:")
-print(matrix)
-# Вывод закончен
 print()
 # Вывод ответа на экран
 print("Определитель матрицы " + str(matrix) + " = " + str(determinant(matrix, 1)))
