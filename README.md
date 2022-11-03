@@ -8,19 +8,19 @@
 >###
 > Вот как это выглядит:
 > 
-> <img style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;" src="C:\Users\User\Desktop\program_for_math\image_1.png">
+> <img style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;" src="https://github.com/georgij1/program_for_math/blob/main/image_1.png">
 > 
 > Дальше вам выводится инструкция о том как правильно ввести матрицу
 >
-> <img src="C:\Users\User\Desktop\program_for_math\image_2.png" style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;">
+> <img src="https://github.com/georgij1/program_for_math/blob/main/image_2.png" style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;">
 > 
 > Далее выволится матрица, которую, вы ввели
 > 
-> <img src="C:\Users\User\Desktop\program_for_math\image_3.png" style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;">
+> <img src="https://github.com/georgij1/program_for_math/blob/main/image_3.png" style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;">
 > 
 > Далее главная часть программы вычисляем определитель
 > 
-> <img src="C:\Users\User\Desktop\program_for_math\image_4.png" style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;">
+> <img src="https://github.com/georgij1/program_for_math/blob/main/image_4.png" style="border-radius: 5px; box-shadow: 0 0 10px; margin: auto; display: block;">
 > <div style="padding: 10px;"></div>
 
 > 2) Меттод крамера - <a href="https://github.com/georgij1/program_for_math/blob/main/kramer_method.py" target="_blank">kramer_method.py</a>
