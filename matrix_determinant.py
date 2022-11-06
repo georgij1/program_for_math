@@ -1,3 +1,4 @@
+import sys
 print("Программу по счёту определителя матрицы")
 
 
@@ -29,6 +30,7 @@ input_str = int(input("Введите колличество строк: "))
 input_row = int(input("Введите колличестов столбцов: "))
 
 matrix = []
+
 print("Каждое число в матрице заполняется через Enter")
 print()
 print("Введите матрицу: ")
@@ -45,8 +47,18 @@ print("Введённая вами матрица:")
 for i in range(input_str):
     for j in range(input_row):
         print(matrix[i][j], end=" ")
+
     print()
 
 print()
+
+if len(matrix) == 2:
+    print("Матрица введена верна")
+else:
+    print("Матрица введена не верна")
+    print("Не возможно посчитать определитель")
+    sys.exit()
+
+
 # Вывод ответа на экран
 print("Определитель матрицы " + str(matrix) + " = " + str(determinant(matrix, 1)))
