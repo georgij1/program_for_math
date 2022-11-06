@@ -52,7 +52,7 @@ for i in range(input_str):
 
 print()
 
-if len(matrix) == 2:
+if len(matrix) / 2:
     print("Матрица введена верна")
 else:
     print("Матрица введена не верна")
