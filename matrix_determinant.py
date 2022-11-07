@@ -5,7 +5,7 @@ for i in range(sizeOfMatrix):
     rows = list(map(int, input('Введите цыфры, которые, будут добавлены  в мтарицу через пробел: ').split()))[:sizeOfMatrix]
     m.append(rows)
 
-print(f'\nMatrix:')
+print(f'\nМатрица:')
 for i in m:
     print(*i)
 
