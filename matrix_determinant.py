@@ -1,64 +1,33 @@
-import sys
-print("Программу по счёту определителя матрицы")
+sizeOfMatrix = int(input('Размер матрицы: '))
+m = []
+
+for i in range(sizeOfMatrix):
+    rows = list(map(int, input('Введите цыфры, которые, будут добавлены  в мтарицу через пробел: ').split()))[:sizeOfMatrix]
+    m.append(rows)
+
+print(f'\nMatrix:')
+for i in m:
+    print(*i)
 
 
-# Функция для счёта определителя матрицы
-def determinant(matrix, mul):
-    width = len(matrix)
-    if width == 1:
-        return mul * matrix[0][0]
-    else:
-        sign = -1
-        answer = 0
-        for i in range(width):
-            m = []
-            for j in range(1, width):
-                buff = []
-                for k in range(width):
-                    if k != i:
-                        buff.append(matrix[j][k])
-                m.append(buff)
-            sign *= -1
-            answer = answer + mul * determinant(m, sign * matrix[0][i])
-    return answer
+def det2(matrix):
+    return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
 
 
-# Ввод кол-во строк
-input_str = int(input("Введите колличество строк: "))
+def minor(matrix, i, j):
+    tmp = [row for k, row in enumerate(matrix) if k != i]
+    tmp = [col for k, col in enumerate(zip(*tmp)) if k != j]
+    return tmp
 
-# Ввод кол-во столбцов
-input_row = int(input("Введите колличестов столбцов: "))
 
-matrix = []
+def determinant(matrix):
+    size = len(matrix)
+    if size == 2:
+        return det2(matrix)
 
-print("Каждое число в матрице заполняется через Enter")
-print()
-print("Введите матрицу: ")
+    return sum((-1) ** j * matrix[0][j] * determinant(minor(matrix, 0, j))
+               for j in range(size))
 
-for i in range(input_str):
-    a = []
-    for j in range(input_row):
-        a.append(int(input()))
-    matrix.append(a)
 
 print()
-print("Введённая вами матрица:")
-
-for i in range(input_str):
-    for j in range(input_row):
-        print(matrix[i][j], end=" ")
-
-    print()
-
-print()
-
-if len(matrix) / 2:
-    print("Матрица введена верна")
-else:
-    print("Матрица введена не верна")
-    print("Не возможно посчитать определитель")
-    sys.exit()
-
-
-# Вывод ответа на экран
-print("Определитель матрицы " + str(matrix) + " = " + str(determinant(matrix, 1)))
+print("Определитель матрицы = " + str(determinant(m)))
