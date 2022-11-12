@@ -1,20 +1,20 @@
 # Умножение матриц
 
-a = [[1, 1, 0],
-     [1, 0, 2]]
+sizeOfMatrix_1 = int(input('Размер матрицы: '))
+sizeOfMatrix_2 = int(input('Размер матрицы: '))
+A = []
+B = []
 
-b = [[1, 0, 2, 1],
-     [2, 1, 2, 0],
-     [1, 1, 0, 3]]
+for i in range(sizeOfMatrix_1):
+    rows = list(map(int, input('Введите цыфры, которые, будут добавлены  в мтарицу через пробел: ').split()))[:sizeOfMatrix_1]
+    A.append(rows)
 
-m = len(a)  # a: m × n
-n = len(b)  # b: n × k
-k = len(b[0])
+for i in range(sizeOfMatrix_2):
+    rows = list(map(int, input('Введите цыфры, которые, будут добавлены  в мтарицу через пробел: ').split()))[:sizeOfMatrix_2]
+    B.append(rows)
 
-c = [[None for __ in range(k)] for __ in range(m)]  # c: m × k
 
-for i in range(m):
-    for j in range(k):
-        c[i][j] = sum(a[i][kk] * b[kk][j] for kk in range(n))
-
-print(c)
+multiResult = [[sum(a * b for a, b in zip(Arow, Bcol)) for Bcol in zip(*B)] for Arow in A]
+print("The multiplication result of matrix A and B is: ")
+for res in multiResult:
+    print(res)
