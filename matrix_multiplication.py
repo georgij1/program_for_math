@@ -1,7 +1,23 @@
+import sys
 # Умножение матриц
 
 sizeOfMatrix_1 = int(input('Размер матрицы: '))
 sizeOfMatrix_2 = int(input('Размер матрицы: '))
+
+
+def Matrix_is_Square():
+    all_matrix = sizeOfMatrix_1 + sizeOfMatrix_2
+    if all_matrix % 2:
+        valid_matrix = all_matrix % 2
+        print(valid_matrix)
+    else:
+        print('Ваша матрица не квадратная')
+        sys.exit()
+
+
+Matrix_is_Square()
+
+
 A = []
 B = []
 
